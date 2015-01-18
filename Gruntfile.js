@@ -1,10 +1,7 @@
 /*global module:false*/
 module.exports = function (grunt) {
-  var sourceFiles = ['src/**/*.js', '!src/lib/md5.js', 'utils/log-to.js', '!src/**/*-spec.js'];
-  var testFiles = ['src/**/*-spec.js'];
-  var testPages = ['index.html', 'test/page.html'];
-
-  var globalName = 'iframeApi';
+  var sourceFiles = ['console-log-div.js'];
+  var testPages = ['test/index.html'];
 
   grunt.initConfig({
 
@@ -13,13 +10,11 @@ module.exports = function (grunt) {
         valid: 'dashes',
         except: 'verify-md5.js'
       },
-      src: sourceFiles,
-      test: testFiles
+      src: sourceFiles
     },
 
     jshint: {
       all: sourceFiles,
-      test: testFiles,
       options: {
         jshintrc: 'utils/.jshintrc',
         reporter: require('jshint-summary')
@@ -44,7 +39,7 @@ module.exports = function (grunt) {
     'clean-console': {
       test: {
         options: {
-          url: 'index.html',
+          url: testPages,
           timeout: 1 // seconds to wait for any errors
         }
       }
@@ -56,44 +51,10 @@ module.exports = function (grunt) {
       },
       src: [
         'README.md',
-        'dist/*.js',
-        'index.html',
-        'bower_components/es5-shim/es5-shim.js',
-        'test/page.html',
-        'test/*.js',
-        'utils/log-to.js'
+        'console-log-div.js',
+        'test/index.html',
+        'bower_components/es5-shim/es5-shim.js'
       ]
-    },
-
-    browserify: {
-      api: {
-        options: {
-          browserifyOptions: {
-            standalone: globalName
-          }
-        },
-        src: ['src/iframe-api.js'],
-        dest: 'dist/iframe-api.js'
-      }
-    },
-
-    mochaTest: {
-      test: {
-        options: {
-          reporter: 'spec'
-        },
-        src: testFiles
-      }
-    },
-
-    watch: {
-      options: {
-        atBegin: true
-      },
-      all: {
-        files: [sourceFiles, testFiles, testPages],
-        tasks: ['browserify', 'test', 'lint']
-      }
     }
   });
 
@@ -101,6 +62,6 @@ module.exports = function (grunt) {
   plugins.forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('lint', ['filenames', 'jshint', 'eslint', 'jscs']);
-  grunt.registerTask('test', ['mochaTest', 'clean-console']);
-  grunt.registerTask('default', ['deps-ok', 'nice-package', 'lint', 'sync', 'browserify', 'test']);
+  grunt.registerTask('test', ['clean-console']);
+  grunt.registerTask('default', ['deps-ok', 'nice-package', 'lint', 'sync', 'test']);
 };

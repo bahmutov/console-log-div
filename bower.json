@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "Gleb Bahmutov <gleb.bahmutov@gmail.com>"
+  ],
+  "name": "console-log-div",
+  "version": "0.0.2",
+  "description": "Clones console.log calls to a created div in the page. Great for demos and experiments.",
+  "license": "MIT",
+  "homepage": "https://github.com/bahmutov/console-log-div",
+  "keywords": [
+    "console",
+    "log",
+    "message",
+    "div",
+    "element",
+    "browser",
+    "page",
+    "show",
+    "visible",
+    "clone"
+  ]
+}
