@@ -1,4 +1,4 @@
-(function initlogTo() {
+(function initConsoleLogDiv() {
 
   var log = console.log.bind(console);
   var logTo = document.createElement('div');
