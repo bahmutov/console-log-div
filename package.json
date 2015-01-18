@@ -1,0 +1,31 @@
+{
+  "name": "console-log-div",
+  "version": "0.0.1",
+  "description": "Clones console.log calls to a created div in the page. Great for demos and experiments.",
+  "main": "console-log-div.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahmutov/console-log-div.git"
+  },
+  "keywords": [
+    "console",
+    "log",
+    "message",
+    "div",
+    "element",
+    "browser",
+    "page",
+    "show",
+    "visible",
+    "clone"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/console-log-div/issues"
+  },
+  "homepage": "https://github.com/bahmutov/console-log-div"
+}
