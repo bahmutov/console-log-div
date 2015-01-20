@@ -15,6 +15,22 @@
 * Grab using npm or bower under name `console-log-div`.
 * Include 'console-log-div.js' in your page. `console.log` calls will be shown in the div on the page.
 
+The created div will have class `.console-log-div`, thus you can style it
+
+```
+<style>
+.console-log-div {
+  border: 1px solid gray;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 95% !important;
+  background-color: #efefef;
+}
+</style>
+```
+
+![console-log-div image][console-log-div image]
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
@@ -63,3 +79,4 @@ OTHER DEALINGS IN THE SOFTWARE.
 [console-log-div-dependencies-url]: https://david-dm.org/bahmutov/console-log-div
 [console-log-div-devdependencies-image]: https://david-dm.org/bahmutov/console-log-div/dev-status.png
 [console-log-div-devdependencies-url]: https://david-dm.org/bahmutov/console-log-div#info=devDependencies
+[console-log-div image]: images/console-log-div.png

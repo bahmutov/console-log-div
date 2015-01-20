@@ -1,7 +1,7 @@
 {
   "name": "console-log-div",
   "description": "Clones console.log calls to a created div in the page. Great for demos and experiments.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": {
     "url": "https://github.com/bahmutov/console-log-div/issues"

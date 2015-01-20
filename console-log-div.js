@@ -2,6 +2,7 @@
 
   var log = console.log.bind(console);
   var logTo = document.createElement('div');
+  logTo.classList.add('console-log-div');
   logTo.style.width = '100%';
   logTo.style.minHeight = '200px';
   logTo.style.fontFamily = 'monospace';
