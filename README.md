@@ -10,10 +10,18 @@
 [![dependencies][console-log-div-dependencies-image] ][console-log-div-dependencies-url]
 [![devdependencies][console-log-div-devdependencies-image] ][console-log-div-devdependencies-url]
 
+Screenshot
+
+![console-log-div image][console-log-div image]
+
 ## Use
 
 * Grab using npm or bower under name `console-log-div`.
 * Include 'console-log-div.js' in your page. `console.log` calls will be shown in the div on the page.
+
+```
+<script src="bower_components/console-log-div/console-log-div.js"></script>
+```
 
 The created div will have class `.console-log-div`, thus you can style it
 
@@ -28,8 +36,6 @@ The created div will have class `.console-log-div`, thus you can style it
 }
 </style>
 ```
-
-![console-log-div image][console-log-div image]
 
 ### Small print
 
