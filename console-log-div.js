@@ -1,7 +1,6 @@
 (function initConsoleLogDiv() {
 
-  /* eslint no-use-before-define:0 */
-  if (console.log === logWithCopy) {
+  if (console.log.toDiv) {
     return;
   }
 
@@ -32,5 +31,6 @@
   }
 
   console.log = logWithCopy;
+  console.log.toDiv = true;
 
 }());
