@@ -37,6 +37,16 @@ The created div will have class `.console-log-div`, thus you can style it
 </style>
 ```
 
+When showing demos on [jsfiddle][jsfiddle] or [plnkr][plnkr]
+you can use RawGit proxy
+
+```html
+<script src="https://rawgit.com/bahmutov/console-log-div/master/console-log-div.js"></script>
+```
+
+[jsfiddle]: http://jsfiddle.net/
+[plnkr]: http://plnkr.co/
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
