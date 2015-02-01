@@ -26,8 +26,8 @@
     var msg = Array.prototype.slice.call(arguments, 0)
       .map(toString)
       .join(' ');
-    var text = logTo.innerText;
-    logTo.innerText = text + msg + '\n';
+    var text = logTo.textContent;
+    logTo.textContent = text + msg + '\n';
   }
 
   function logWithCopy() {
