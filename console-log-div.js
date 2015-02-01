@@ -14,10 +14,12 @@
   var logTo = (function createLogDiv() {
     var div = document.createElement('div');
     div.classList.add('console-log-div');
-    div.style.width = '100%';
-    div.style.minHeight = '200px';
-    div.style.fontFamily = 'monospace';
-    div.style.marginTop = '20px';
+    var style = div.style;
+    style.width = '100%';
+    style.minHeight = '200px';
+    style.fontFamily = 'monospace';
+    style.marginTop = '20px';
+    style.whiteSpace = 'pre';
     document.body.appendChild(div);
     return div;
   }());
