@@ -12,7 +12,9 @@
   var error = console.error.bind(console);
 
   var logTo = (function createLogDiv() {
+
     var div = document.createElement('div');
+    div.id = 'console-log-div';
     div.classList.add('console-log-div');
     var style = div.style;
     style.width = '100%';
@@ -20,7 +22,11 @@
     style.fontFamily = 'monospace';
     style.marginTop = '20px';
     style.whiteSpace = 'pre';
+    style.border = '1px solid black';
+    style.borderRadius = '5px';
+    style.padding = '5px 10px';
     document.body.appendChild(div);
+
     return div;
   }());
 

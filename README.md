@@ -23,7 +23,7 @@ Screenshot
 <script src="bower_components/console-log-div/console-log-div.js"></script>
 ```
 
-The created div will have class `.console-log-div`, thus you can style it
+The created div will have class `.console-log-div` and id `console-log-div` thus you can style it
 
 ```
 <style>
