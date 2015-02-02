@@ -17,7 +17,7 @@
     outer.classList.add('console-log-div');
     var style = outer.style;
     style.width = '100%';
-    style.minHeight = '200px';
+    // style.minHeight = '200px';
     style.fontFamily = 'monospace';
     style.marginTop = '20px';
     style.whiteSpace = 'pre';
