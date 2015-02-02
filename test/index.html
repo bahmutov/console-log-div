@@ -7,9 +7,6 @@
   <script src="../bower_components/es5-shim/es5-shim.js"></script>
   <style>
   .console-log-div {
-    border: 1px solid gray;
-    padding: 5px 10px;
-    border-radius: 5px;
     width: 95% !important;
     background-color: #efefef;
   }
@@ -28,6 +25,14 @@
       console.log('this is console.log message');
       console.log('foo');
       console.error('example of error message');
+      var textEl = document.getElementById('console-log-text');
+      if (!textEl) {
+        throw new Error('cannot find text element');
+      }
+      var text = textEl.textContent;
+      if (text.indexOf('foo') === -1) {
+        throw new Error('Cannot find text foo in ' + text);
+      }
     </script>
 
 </body>
