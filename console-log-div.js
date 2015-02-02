@@ -11,12 +11,11 @@
   var log = console.log.bind(console);
   var error = console.error.bind(console);
 
-  var logTo = (function createLogDiv() {
-
-    var div = document.createElement('div');
-    div.id = 'console-log-div';
-    div.classList.add('console-log-div');
-    var style = div.style;
+  function createOuterElement() {
+    var outer = document.createElement('fieldset');
+    outer.id = 'console-log-div';
+    outer.classList.add('console-log-div');
+    var style = outer.style;
     style.width = '100%';
     style.minHeight = '200px';
     style.fontFamily = 'monospace';
@@ -25,7 +24,23 @@
     style.border = '1px solid black';
     style.borderRadius = '5px';
     style.padding = '5px 10px';
-    document.body.appendChild(div);
+    return outer;
+  }
+
+  var logTo = (function createLogDiv() {
+
+    var outer = createOuterElement();
+
+    var caption = document.createTextNode('console output');
+    var legend = document.createElement('legend');
+    legend.appendChild(caption);
+    outer.appendChild(legend);
+
+    var div = document.createElement('div');
+    div.id = 'console-log-text';
+    outer.appendChild(div);
+
+    document.body.appendChild(outer);
 
     return div;
   }());
