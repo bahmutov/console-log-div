@@ -10,6 +10,16 @@
     width: 95% !important;
     background-color: #efefef;
   }
+  #log {
+    display: block;
+    white-space: pre;
+    font-family: monospace;
+  }
+  #log:before {
+    content: "log javascript:";
+    font-style: italic;
+    color: #555;
+  }
   </style>
 </head>
 <body>
@@ -21,10 +31,12 @@
     <script src="../console-log-div.js"></script>
     <script src="../console-log-div.js"></script>
 
-    <script>
+    <script id="log">
       console.log('this is console.log message');
       console.log('foo');
       console.error('example of error message');
+    </script>
+    <script>
       var textEl = document.getElementById('console-log-text');
       if (!textEl) {
         throw new Error('cannot find text element');
