@@ -10,6 +10,7 @@
 
   var log = console.log.bind(console);
   var error = console.error.bind(console);
+  var warn = console.warn.bind(console);
 
   function createOuterElement() {
     var outer = document.createElement('fieldset');
@@ -66,6 +67,15 @@
     var args = Array.prototype.slice.call(arguments, 0);
     args.unshift('ERROR:');
     printToDiv.apply(null, args);
+  };
+
+   console.warn = function logWarning() {
+    warn.apply(null,arguments);
+    var args = Array.prototype.slice.call(arguments, 0);
+    args.unshift('WARNING');
+
+    printToDiv.apply(null,args);
+
   };
 
 }());
