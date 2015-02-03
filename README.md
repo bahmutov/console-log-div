@@ -2,7 +2,8 @@
 
 > Clones console.log calls to a created div in the page. Great for demos and experiments.
 
-[Demo](http://glebbahmutov.com/console-log-div/test/index.html)
+[Demo](http://glebbahmutov.com/console-log-div/test/index.html),
+[Better short JS demos blog post](http://bahmutov.calepin.co/better-short-javascript-demos.html)
 
 [![NPM][console-log-div-icon] ][console-log-div-url]
 
