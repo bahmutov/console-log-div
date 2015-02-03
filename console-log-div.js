@@ -68,4 +68,12 @@
     printToDiv.apply(null, args);
   };
 
+   console.warn = function logWarning() {
+    warn.apply(null,arguments);
+    var args = Array.prototype.slice.call(arguments, 0);
+    args.unshift('WARNING');
+    printToDiv.apply(null,args);
+
+  }
+
 }());
