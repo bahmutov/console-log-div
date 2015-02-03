@@ -10,6 +10,7 @@
 
   var log = console.log.bind(console);
   var error = console.error.bind(console);
+  var warn = console.warn.bind(console);
 
   function createOuterElement() {
     var outer = document.createElement('fieldset');
