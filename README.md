@@ -11,8 +11,6 @@
 [![dependencies][console-log-div-dependencies-image] ][console-log-div-dependencies-url]
 [![devdependencies][console-log-div-devdependencies-image] ][console-log-div-devdependencies-url]
 
-Screenshot
-
 ![console-log-div image][console-log-div image]
 
 ## Use
