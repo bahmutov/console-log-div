@@ -47,6 +47,14 @@ you can use RawGit proxy
 [jsfiddle]: http://jsfiddle.net/
 [plnkr]: http://plnkr.co/
 
+## Handling exceptions
+
+This library installs window error event listener, and prints the exception's message and location.
+For example throwing an error like this `throw new Error('this is a thrown error');` will generate text output
+
+    EXCEPTION: Uncaught Error: this is a thrown error
+      file:///console-log-div/test/index.html 39:13
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015

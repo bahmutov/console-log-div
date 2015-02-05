@@ -72,10 +72,12 @@
   console.warn = function logWarning() {
     warn.apply(null, arguments);
     var args = Array.prototype.slice.call(arguments, 0);
-    args.unshift('WARNING');
-
+    args.unshift('WARNING:');
     printToDiv.apply(null, args);
-
   };
+
+  window.addEventListener('error', function (err) {
+    printToDiv('EXCEPTION:', err.message + '\n  ' + err.filename, err.lineno + ':' + err.colno);
+  });
 
 }());
