@@ -37,6 +37,19 @@ The inner text will has id `console-log-text`.
 </style>
 ```
 
+## Customize existing fieldset
+
+Instead of adding a new element at the end of the body, you can mirror console output to an existing `fieldset` 
+element. Just give it id `console-log-div`.
+
+    <fieldset id="console-log-div"></fieldset>
+    <p>The fieldset above will mirror <code>console.log</code> calls</p>
+    <script src="../console-log-div.js"></script>
+
+I used `fieldset` tag to place an html5 label on the top border.
+
+## jsFiddle demos
+
 When showing demos on [jsfiddle][jsfiddle] or [plnkr][plnkr]
 you can use RawGit proxy
 

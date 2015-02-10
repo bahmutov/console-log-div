@@ -1,7 +1,7 @@
 /*global module:false*/
 module.exports = function (grunt) {
   var sourceFiles = ['console-log-div.js'];
-  var testPages = ['test/index.html'];
+  var testPages = ['test/index.html', 'test/existing.html'];
 
   grunt.initConfig({
 
@@ -53,6 +53,7 @@ module.exports = function (grunt) {
         'README.md',
         'console-log-div.js',
         'test/index.html',
+        'test/existing.html',
         'bower_components/es5-shim/es5-shim.js'
       ]
     }

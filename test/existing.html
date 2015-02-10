@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>existing console-log-div</title>
+  <script src="../bower_components/es5-shim/es5-shim.js"></script>
+  <style>
+  #console-log-div {
+    width: 98% !important;
+    background-color: #efefef;
+  }
+  #log {
+    margin: 10px 0px;
+    display: block;
+    white-space: pre;
+    font-family: monospace;
+  }
+  #log:before {
+    content: "log javascript:";
+    font-style: italic;
+    color: #555;
+  }
+  </style>
+</head>
+<body>
+    <h2>existing console-log-div</h2>
+    <fieldset id="console-log-div"></fieldset>
+
+    <p>The fieldset above will mirror <code>console.log</code> calls</p>
+
+    <script src="../console-log-div.js"></script>
+
+    <script id="log">
+      console.log('this is console.log message');
+      console.log('foo');
+      console.log('bar');
+      console.log('baz');
+      console.error('example of error message');
+      // throw new Error('this is a thrown error');
+    </script>
+    <script>
+      var textEl = document.getElementById('console-log-text');
+      if (!textEl) {
+        throw new Error('cannot find text element');
+      }
+      var text = textEl.textContent;
+      if (text.indexOf('foo') === -1) {
+        throw new Error('Cannot find text foo in ' + text);
+      }
+    </script>
+
+</body>
+</html>
