@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>console-log-div</title>
+  <title>existing console-log-div</title>
   <script src="../bower_components/es5-shim/es5-shim.js"></script>
   <style>
-  .console-log-div {
-    width: 95% !important;
+  #console-log-div {
+    width: 98% !important;
     background-color: #efefef;
   }
   #log {
@@ -24,17 +24,18 @@
   </style>
 </head>
 <body>
-    <h2>console-log-div</h2>
-    <p>A new div will be created automatically and will mirror <code>console.log</code> calls</p>
+    <h2>existing console-log-div</h2>
+    <fieldset id="console-log-div"></fieldset>
 
-    <script src="../console-log-div.js"></script>
-    <!-- multiple include should not matter -->
-    <script src="../console-log-div.js"></script>
+    <p>The fieldset above will mirror <code>console.log</code> calls</p>
+
     <script src="../console-log-div.js"></script>
 
     <script id="log">
       console.log('this is console.log message');
       console.log('foo');
+      console.log('bar');
+      console.log('baz');
       console.error('example of error message');
       // throw new Error('this is a thrown error');
     </script>

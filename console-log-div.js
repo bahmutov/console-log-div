@@ -10,11 +10,18 @@
 
   var log = console.log.bind(console);
   var error = console.error.bind(console);
+  var warn = console.warn.bind(console);
 
+  var id = 'console-log-div';
   function createOuterElement() {
-    var outer = document.createElement('fieldset');
-    outer.id = 'console-log-div';
-    outer.classList.add('console-log-div');
+    var outer = document.getElementById(id);
+    if (!outer) {
+      outer = document.createElement('fieldset');
+      outer.id = id;
+      document.body.appendChild(outer);
+    }
+    outer.classList.add('id');
+
     var style = outer.style;
     style.width = '100%';
     // style.minHeight = '200px';
@@ -39,8 +46,6 @@
     var div = document.createElement('div');
     div.id = 'console-log-text';
     outer.appendChild(div);
-
-    document.body.appendChild(outer);
 
     return div;
   }());
@@ -67,5 +72,16 @@
     args.unshift('ERROR:');
     printToDiv.apply(null, args);
   };
+
+  console.warn = function logWarning() {
+    warn.apply(null, arguments);
+    var args = Array.prototype.slice.call(arguments, 0);
+    args.unshift('WARNING:');
+    printToDiv.apply(null, args);
+  };
+
+  window.addEventListener('error', function (err) {
+    printToDiv('EXCEPTION:', err.message + '\n  ' + err.filename, err.lineno + ':' + err.colno);
+  });
 
 }());

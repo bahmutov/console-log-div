@@ -2,15 +2,14 @@
 
 > Clones console.log calls to a created div in the page. Great for demos and experiments.
 
-[Demo](http://glebbahmutov.com/console-log-div/test/index.html)
+[Demo](http://glebbahmutov.com/console-log-div/test/index.html),
+[Better short JS demos blog post](http://bahmutov.calepin.co/better-short-javascript-demos.html)
 
 [![NPM][console-log-div-icon] ][console-log-div-url]
 
 [![Build status][console-log-div-ci-image] ][console-log-div-ci-url]
 [![dependencies][console-log-div-dependencies-image] ][console-log-div-dependencies-url]
 [![devdependencies][console-log-div-devdependencies-image] ][console-log-div-devdependencies-url]
-
-Screenshot
 
 ![console-log-div image][console-log-div image]
 
@@ -38,6 +37,19 @@ The inner text will has id `console-log-text`.
 </style>
 ```
 
+## Customize existing fieldset
+
+Instead of adding a new element at the end of the body, you can mirror console output to an existing `fieldset` 
+element. Just give it id `console-log-div`.
+
+    <fieldset id="console-log-div"></fieldset>
+    <p>The fieldset above will mirror <code>console.log</code> calls</p>
+    <script src="../console-log-div.js"></script>
+
+I used `fieldset` tag to place an html5 label on the top border.
+
+## jsFiddle demos
+
 When showing demos on [jsfiddle][jsfiddle] or [plnkr][plnkr]
 you can use RawGit proxy
 
@@ -47,6 +59,14 @@ you can use RawGit proxy
 
 [jsfiddle]: http://jsfiddle.net/
 [plnkr]: http://plnkr.co/
+
+## Handling exceptions
+
+This library installs window error event listener, and prints the exception's message and location.
+For example throwing an error like this `throw new Error('this is a thrown error');` will generate text output
+
+    EXCEPTION: Uncaught Error: this is a thrown error
+      file:///console-log-div/test/index.html 39:13
 
 ### Small print
 
