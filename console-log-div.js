@@ -1,6 +1,7 @@
-'use strict';
 
 (function initConsoleLogDiv() {
+    'use strict';
+
 
     if (console.log.toDiv) {
         return;
@@ -14,7 +15,6 @@
     var error = console.error.bind(console);
     var warn = console.warn.bind(console);
     var table = console.table.bind(console);
-
     var id = 'console-log-div';
 
     function createOuterElement() {
@@ -91,35 +91,35 @@
         var keys;
         var numCols;
 
-        if (typeof objArr[0] !== 'Undefined') {
+        if (typeof objArr[0] !== 'undefined') {
             keys = Object.keys(objArr[0]);
             numCols = keys.length;
         }
 
         var len = objArr.length;
-        var $table = $("<table></table>");
-        var $head = $("<thead></thead>");
-        $head.append($("<td></td>").html("Index"));
+        var $table = $('<table></table>');
+        var $head = $('<thead></thead>');
+        $head.append($('<td></td>').html('Index'));
 
 
-        for(var i=0;i<numCols;i++) {
-          $head.append($("<td></td>").html(keys[i]));
+        for(var k=0;k<numCols;k++) {
+          $head.append($('<td></td>').html(keys[k]));
         }
         $table.append($head);
 
 
         for (var i = 0; i < len; i++) {
-            var $line = $("<tr></tr>");
-            $line.append($("<td></td>").html(i));
+            var $line = $('<tr></tr>');
+            $line.append($('<td></td>').html(i));
 
             for (var j = 0; j < numCols; j++) {
-                $line.append($("<td></td>").html(objArr[i][keys[j]]));
+                $line.append($('<td></td>').html(objArr[i][keys[j]]));
             }
             $table.append($line);
         }
         var div = document.getElementById('console-log-text');
         $table.appendTo(div);
-    }
+    };
 
     window.addEventListener('error', function(err) {
         printToDiv('EXCEPTION:', err.message + '\n  ' + err.filename, err.lineno + ':' + err.colno);
