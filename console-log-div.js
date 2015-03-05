@@ -106,7 +106,7 @@
         }
         var div = document.getElementById('console-log-text');
         $table.appendTo(div);
-    };
+    }
 
     console.table = function logTable() {
         table.apply(null, arguments);
