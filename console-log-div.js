@@ -1,4 +1,3 @@
-
 (function initConsoleLogDiv() {
     'use strict';
 
@@ -84,34 +83,22 @@
         printToDiv.apply(null, args);
     };
 
-
-    console.table = function logTable() {
-        table.apply(null, arguments);
-        var objArr = arguments[0];
-        var keys;
-        var numCols;
-
-        if (typeof objArr[0] !== 'undefined') {
-            keys = Object.keys(objArr[0]);
-            numCols = keys.length;
-        }
-
+   
+    function printTable(objArr,keys) {
+        var numCols = keys.length;
         var len = objArr.length;
         var $table = $('<table></table>');
         var $head = $('<thead></thead>');
         $head.append($('<td></td>').html('Index'));
-
 
         for(var k=0;k<numCols;k++) {
           $head.append($('<td></td>').html(keys[k]));
         }
         $table.append($head);
 
-
         for (var i = 0; i < len; i++) {
             var $line = $('<tr></tr>');
             $line.append($('<td></td>').html(i));
-
             for (var j = 0; j < numCols; j++) {
                 $line.append($('<td></td>').html(objArr[i][keys[j]]));
             }
@@ -119,6 +106,17 @@
         }
         var div = document.getElementById('console-log-text');
         $table.appendTo(div);
+    };
+
+    console.table = function logTable() {
+        table.apply(null, arguments);
+        var objArr = arguments[0];
+        var keys;
+
+        if (typeof objArr[0] !== 'undefined') {
+            keys = Object.keys(objArr[0]);
+        }
+        printTable(objArr,keys);
     };
 
     window.addEventListener('error', function(err) {
