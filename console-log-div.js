@@ -85,27 +85,39 @@
 
    
     function printTable(objArr,keys) {
+
         var numCols = keys.length;
         var len = objArr.length;
-        var $table = $('<table></table>');
-        var $head = $('<thead></thead>');
-        $head.append($('<td></td>').html('Index'));
+        var $table = document.createElement('table');
+        $table.style.width='100%';
+		$table.setAttribute('border','1');	
+        var $head = document.createElement('thead');
+        var $tdata = document.createElement('td');
+        $tdata.innerHTML = 'Index';
+        $head.appendChild($tdata);
 
         for(var k=0;k<numCols;k++) {
-          $head.append($('<td></td>').html(keys[k]));
+        	var $tdata = document.createElement('td');
+        	$tdata.innerHTML = keys[k];
+        	$head.appendChild($tdata);
         }
-        $table.append($head);
+        $table.appendChild($head);
 
         for (var i = 0; i < len; i++) {
-            var $line = $('<tr></tr>');
-            $line.append($('<td></td>').html(i));
+        	var $line = document.createElement('tr');
+        	var $tdata = document.createElement('td');
+        	$tdata.innerHTML = i;
+        	$line.appendChild($tdata);
+
             for (var j = 0; j < numCols; j++) {
-                $line.append($('<td></td>').html(objArr[i][keys[j]]));
+            	var $tdata = document.createElement('td');
+            	$tdata.innerHTML = objArr[i][keys[j]];
+            	$line.appendChild($tdata);
             }
-            $table.append($line);
+            $table.appendChild($line);
         }
         var div = document.getElementById('console-log-text');
-        $table.appendTo(div);
+        div.appendChild($table);
     }
 
     console.table = function logTable() {
