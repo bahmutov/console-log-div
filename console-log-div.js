@@ -96,22 +96,22 @@
         $head.appendChild($tdata);
 
         for(var k = 0;k < numCols;k++) {
-        	$tdata = document.createElement('td');
-        	$tdata.innerHTML = keys[k];
-        	$head.appendChild($tdata);
+			$tdata = document.createElement('td');
+			$tdata.innerHTML = keys[k];
+			$head.appendChild($tdata);
         }
         $table.appendChild($head);
 
         for (var i = 0; i < len; i++) {
-        	var $line = document.createElement('tr');
-        	$tdata = document.createElement('td');
-        	$tdata.innerHTML = i;
-        	$line.appendChild($tdata);
+			var $line = document.createElement('tr');
+			$tdata = document.createElement('td');
+			$tdata.innerHTML = i;
+			$line.appendChild($tdata);
 
             for (var j = 0; j < numCols; j++) {
-            	$tdata = document.createElement('td');
-            	$tdata.innerHTML = objArr[i][keys[j]];
-            	$line.appendChild($tdata);
+				$tdata = document.createElement('td');
+				$tdata.innerHTML = objArr[i][keys[j]];
+				$line.appendChild($tdata);
             }
             $table.appendChild($line);
         }
