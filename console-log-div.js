@@ -97,7 +97,7 @@
         $head.appendChild($tdata);
 
         for(var k=0;k<numCols;k++) {
-        	var $tdata = document.createElement('td');
+        	$tdata = document.createElement('td');
         	$tdata.innerHTML = keys[k];
         	$head.appendChild($tdata);
         }
@@ -105,12 +105,12 @@
 
         for (var i = 0; i < len; i++) {
         	var $line = document.createElement('tr');
-        	var $tdata = document.createElement('td');
+        	$tdata = document.createElement('td');
         	$tdata.innerHTML = i;
         	$line.appendChild($tdata);
 
             for (var j = 0; j < numCols; j++) {
-            	var $tdata = document.createElement('td');
+            	$tdata = document.createElement('td');
             	$tdata.innerHTML = objArr[i][keys[j]];
             	$line.appendChild($tdata);
             }
