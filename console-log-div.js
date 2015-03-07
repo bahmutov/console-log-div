@@ -83,20 +83,19 @@
         printToDiv.apply(null, args);
     };
 
-   
-    function printTable(objArr,keys) {
+    function printTable(objArr, keys) {
 
         var numCols = keys.length;
         var len = objArr.length;
         var $table = document.createElement('table');
-        $table.style.width='100%';
-		$table.setAttribute('border','1');	
+        $table.style.width = '100%';
+		$table.setAttribute('border', '1');
         var $head = document.createElement('thead');
         var $tdata = document.createElement('td');
         $tdata.innerHTML = 'Index';
         $head.appendChild($tdata);
 
-        for(var k=0;k<numCols;k++) {
+        for(var k = 0;k < numCols;k++) {
         	$tdata = document.createElement('td');
         	$tdata.innerHTML = keys[k];
         	$head.appendChild($tdata);
@@ -128,7 +127,7 @@
         if (typeof objArr[0] !== 'undefined') {
             keys = Object.keys(objArr[0]);
         }
-        printTable(objArr,keys);
+        printTable(objArr, keys);
     };
 
     window.addEventListener('error', function(err) {
