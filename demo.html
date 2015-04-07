@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>console-log-div</title>
+  <script src="../bower_components/es5-shim/es5-shim.js"></script>
+
+  <style>
+  .console-log-div {
+    width: 95% !important;
+    background-color: #efefef;
+  }
+  #log {
+    margin: 10px 0px;
+    display: block;
+    white-space: pre;
+    font-family: monospace;
+  }
+  #log:before {
+    content: "log javascript:";
+    font-style: italic;
+    color: #555;
+  }
+
+  table td{
+    border: 1px solid black;
+  }
+  </style>
+</head>
+<body>
+    <h2>console-log-div</h2>
+    <p>A new div will be created automatically and will mirror <code>console.log</code> calls</p>
+
+    <script src="../console-log-div.js"></script>
+
+
+    <script id="log">
+      console.log('this is console.log message');
+      console.warn('this is warning');
+      console.error('example of error message');
+      var languages = [ { name: "JavaScript", fileExtension: ".js" },
+                    { name: "TypeScript", fileExtension: ".ts" },
+                    { name: "CoffeeScript", fileExtension: ".coffee" }
+                   ];
+
+      console.table(languages);
+
+
+
+    </script>
+ 
+
+</body>
+</html>
