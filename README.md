@@ -68,6 +68,10 @@ For example throwing an error like this `throw new Error('this is a thrown error
     EXCEPTION: Uncaught Error: this is a thrown error
       file:///console-log-div/test/index.html 39:13
 
+## Console methods
+
+The following methods are mirrored into the div: `console.log, .warn, .error and .table`.
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
