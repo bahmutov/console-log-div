@@ -64,5 +64,5 @@ module.exports = function (grunt) {
 
   grunt.registerTask('lint', ['filenames', 'jshint', 'eslint', 'jscs']);
   grunt.registerTask('test', ['clean-console']);
-  grunt.registerTask('default', ['deps-ok', 'nice-package', 'lint', 'sync', 'test']);
+  grunt.registerTask('default', ['deps-ok', 'nice-package', 'lint', 'sync']);
 };
