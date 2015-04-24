@@ -26,10 +26,12 @@
     outer.classList.add('id');
 
     var style = outer.style;
-    style.width = '100%';
+    // style.width = '100%';
     // style.minHeight = '200px';
     style.fontFamily = 'monospace';
     style.marginTop = '20px';
+    style.marginLeft = '10px';
+    style.marginRight = '10px';
     style.whiteSpace = 'pre';
     style.border = '1px solid black';
     style.borderRadius = '5px';
