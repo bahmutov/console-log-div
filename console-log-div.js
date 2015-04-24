@@ -1,4 +1,6 @@
 (function initConsoleLogDiv() {
+  'use strict';
+
 
   if (console.log.toDiv) {
     return;
@@ -11,8 +13,9 @@
   var log = console.log.bind(console);
   var error = console.error.bind(console);
   var warn = console.warn.bind(console);
-
+  var table = console.table.bind(console);
   var id = 'console-log-div';
+
   function createOuterElement() {
     var outer = document.getElementById(id);
     if (!outer) {
@@ -80,8 +83,55 @@
     printToDiv.apply(null, args);
   };
 
+  function printTable(objArr, keys) {
+
+    var numCols = keys.length;
+    var len = objArr.length;
+    var $table = document.createElement('table');
+    $table.style.width = '100%';
+    $table.setAttribute('border', '1');
+    var $head = document.createElement('thead');
+    var $tdata = document.createElement('td');
+    $tdata.innerHTML = 'Index';
+    $head.appendChild($tdata);
+
+    for (var k = 0; k < numCols; k++) {
+      $tdata = document.createElement('td');
+      $tdata.innerHTML = keys[k];
+      $head.appendChild($tdata);
+    }
+    $table.appendChild($head);
+
+    for (var i = 0; i < len; i++) {
+      var $line = document.createElement('tr');
+      $tdata = document.createElement('td');
+      $tdata.innerHTML = i;
+      $line.appendChild($tdata);
+
+      for (var j = 0; j < numCols; j++) {
+        $tdata = document.createElement('td');
+        $tdata.innerHTML = objArr[i][keys[j]];
+        $line.appendChild($tdata);
+      }
+      $table.appendChild($line);
+    }
+    var div = document.getElementById('console-log-text');
+    div.appendChild($table);
+  }
+
+  console.table = function logTable() {
+    table.apply(null, arguments);
+    var objArr = arguments[0];
+    var keys;
+
+    if (typeof objArr[0] !== 'undefined') {
+      keys = Object.keys(objArr[0]);
+    }
+    printTable(objArr, keys);
+  };
+
   window.addEventListener('error', function (err) {
-    printToDiv('EXCEPTION:', err.message + '\n  ' + err.filename, err.lineno + ':' + err.colno);
+    printToDiv( 'EXCEPTION:', err.message + '\n  ' + err.filename, err.lineno + ':' + err.colno);
   });
 
 }());

@@ -3,7 +3,7 @@
 > Clones console.log calls to a created div in the page. Great for demos and experiments.
 
 [Demo](http://glebbahmutov.com/console-log-div/test/index.html),
-[Better short JS demos blog post](http://bahmutov.calepin.co/better-short-javascript-demos.html)
+[Better short JS demos blog post](http://glebbahmutov.com/blog/better-short-javascript-demos/)
 
 [![NPM][console-log-div-icon] ][console-log-div-url]
 
@@ -68,13 +68,17 @@ For example throwing an error like this `throw new Error('this is a thrown error
     EXCEPTION: Uncaught Error: this is a thrown error
       file:///console-log-div/test/index.html 39:13
 
+## Console methods
+
+The following methods are mirrored into the div: `console.log, .warn, .error and .table`.
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
 
 * [@bahmutov](https://twitter.com/bahmutov)
 * [glebbahmutov.com](http://glebbahmutov.com)
-* [blog](http://bahmutov.calepin.co/)
+* [blog](http://glebbahmutov.com/blog)
 
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
