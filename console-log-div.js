@@ -13,7 +13,7 @@
   var log = console.log.bind(console);
   var error = console.error.bind(console);
   var warn = console.warn.bind(console);
-  var table = console.table.bind(console);
+  var table = console.table ? console.table.bind(console) : null;
   var id = 'console-log-div';
 
   function createOuterElement() {
@@ -122,7 +122,10 @@
   }
 
   console.table = function logTable() {
-    table.apply(null, arguments);
+    if (typeof table === 'function') {
+      table.apply(null, arguments);
+    }
+
     var objArr = arguments[0];
     var keys;
 

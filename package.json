@@ -1,7 +1,7 @@
 {
   "name": "console-log-div",
   "description": "Clones console.log calls to a created div in the page. Great for demos and experiments.",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": {
     "url": "https://github.com/bahmutov/console-log-div/issues"
@@ -45,6 +45,7 @@
   "main": "console-log-div.js",
   "pre-commit": [
     "grunt",
+    "grunt clean-console",
     "npm version"
   ],
   "repository": {
