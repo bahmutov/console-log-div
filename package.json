@@ -11,6 +11,7 @@
     "eslint-rules": "0.3.0",
     "grunt": "0.4.5",
     "grunt-clean-console": "0.2.0",
+    "grunt-cli": "1.2.0",
     "grunt-contrib-jshint": "0.11.0",
     "grunt-contrib-watch": "0.6.1",
     "grunt-deps-ok": "0.5.2",
@@ -23,7 +24,7 @@
     "jshint-summary": "0.4.0",
     "matchdep": "0.3.0",
     "mocha": "2.1.0",
-    "pre-git": "0.1.1"
+    "pre-git": "3.8.3"
   },
   "engines": {
     "node": "> 0.10.*"
@@ -43,16 +44,27 @@
   ],
   "license": "MIT",
   "main": "console-log-div.js",
-  "pre-commit": [
-    "grunt",
-    "grunt clean-console",
-    "npm version"
-  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:bahmutov/console-log-div.git"
   },
   "scripts": {
-    "test": "grunt"
+    "test": "grunt",
+    "commit": "commit-wizard",
+    "build": "grunt",
+    "e2e": "grunt clean-console"
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": "simple",
+      "pre-commit": [
+        "npm run build",
+        "npm run e2e -- --force"
+      ],
+      "pre-push": [],
+      "post-commit": [],
+      "post-checkout": [],
+      "post-merge": []
+    }
   }
 }

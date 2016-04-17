@@ -40,7 +40,7 @@ module.exports = function (grunt) {
       test: {
         options: {
           url: testPages,
-          timeout: 1 // seconds to wait for any errors
+          timeout: 1 // seconds to wait for any errors,
         }
       }
     },
