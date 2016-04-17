@@ -1,60 +1,10 @@
 {
   "name": "console-log-div",
   "description": "Clones console.log calls to a created div in the page. Great for demos and experiments.",
-  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "version": "0.0.0-semantic-release",
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": {
     "url": "https://github.com/bahmutov/console-log-div/issues"
-  },
-  "contributors": [],
-  "devDependencies": {
-    "eslint-rules": "0.3.0",
-    "grunt": "0.4.5",
-    "grunt-clean-console": "0.2.0",
-    "grunt-cli": "1.2.0",
-    "grunt-contrib-jshint": "0.11.0",
-    "grunt-contrib-watch": "0.6.1",
-    "grunt-deps-ok": "0.5.2",
-    "grunt-eslint": "6.0.0",
-    "grunt-filenames": "0.4.0",
-    "grunt-gh-pages": "0.10.0",
-    "grunt-jscs": "1.5.0",
-    "grunt-nice-package": "0.9.2",
-    "grunt-npm2bower-sync": "0.8.1",
-    "jshint-summary": "0.4.0",
-    "matchdep": "0.3.0",
-    "mocha": "2.1.0",
-    "pre-git": "3.8.3",
-    "semantic-release": "4.3.5"
-  },
-  "engines": {
-    "node": "> 0.10.*"
-  },
-  "homepage": "https://github.com/bahmutov/console-log-div",
-  "keywords": [
-    "console",
-    "log",
-    "message",
-    "div",
-    "element",
-    "browser",
-    "page",
-    "show",
-    "visible",
-    "clone"
-  ],
-  "license": "MIT",
-  "main": "console-log-div.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bahmutov/console-log-div.git"
-  },
-  "scripts": {
-    "test": "grunt",
-    "commit": "commit-wizard",
-    "build": "grunt",
-    "e2e": "grunt clean-console",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "config": {
     "pre-git": {
@@ -68,5 +18,55 @@
       "post-checkout": [],
       "post-merge": []
     }
+  },
+  "contributors": [],
+  "devDependencies": {
+    "eslint-rules": "0.4.3",
+    "grunt": "1.0.1",
+    "grunt-clean-console": "0.3.0",
+    "grunt-cli": "1.2.0",
+    "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-deps-ok": "0.9.0",
+    "grunt-eslint": "6.0.0",
+    "grunt-filenames": "0.4.0",
+    "grunt-gh-pages": "1.1.0",
+    "grunt-jscs": "2.8.0",
+    "grunt-nice-package": "0.10.2",
+    "grunt-npm2bower-sync": "0.9.1",
+    "jshint-summary": "0.4.0",
+    "matchdep": "1.0.1",
+    "mocha": "2.4.5",
+    "pre-git": "3.8.3",
+    "semantic-release": "6.2.1"
+  },
+  "engines": {
+    "node": "> 0.10.*"
+  },
+  "homepage": "https://github.com/bahmutov/console-log-div",
+  "keywords": [
+    "browser",
+    "clone",
+    "console",
+    "div",
+    "element",
+    "log",
+    "message",
+    "page",
+    "show",
+    "visible"
+  ],
+  "license": "MIT",
+  "main": "console-log-div.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bahmutov/console-log-div.git"
+  },
+  "scripts": {
+    "build": "grunt",
+    "commit": "commit-wizard",
+    "e2e": "grunt clean-console",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "grunt"
   }
 }

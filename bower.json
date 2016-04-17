@@ -8,15 +8,15 @@
   "license": "MIT",
   "homepage": "https://github.com/bahmutov/console-log-div",
   "keywords": [
+    "browser",
+    "clone",
     "console",
-    "log",
-    "message",
     "div",
     "element",
-    "browser",
+    "log",
+    "message",
     "page",
     "show",
-    "visible",
-    "clone"
+    "visible"
   ]
 }
