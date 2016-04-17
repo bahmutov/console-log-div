@@ -23,7 +23,7 @@
       outer.id = id;
       document.body.appendChild(outer);
     }
-    outer.classList.add('id');
+    outer.classList.add(id);
 
     var style = outer.style;
     // style.width = '100%';
