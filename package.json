@@ -1,8 +1,8 @@
 {
   "name": "console-log-div",
   "description": "Clones console.log calls to a created div in the page. Great for demos and experiments.",
-  "version": "0.6.2",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "version": "0.0.0-semantic-release",
   "bugs": {
     "url": "https://github.com/bahmutov/console-log-div/issues"
   },
@@ -24,7 +24,8 @@
     "jshint-summary": "0.4.0",
     "matchdep": "0.3.0",
     "mocha": "2.1.0",
-    "pre-git": "3.8.3"
+    "pre-git": "3.8.3",
+    "semantic-release": "4.3.5"
   },
   "engines": {
     "node": "> 0.10.*"
@@ -46,13 +47,14 @@
   "main": "console-log-div.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:bahmutov/console-log-div.git"
+    "url": "https://github.com/bahmutov/console-log-div.git"
   },
   "scripts": {
     "test": "grunt",
     "commit": "commit-wizard",
     "build": "grunt",
-    "e2e": "grunt clean-console"
+    "e2e": "grunt clean-console",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "config": {
     "pre-git": {

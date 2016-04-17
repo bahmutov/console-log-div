@@ -10,6 +10,7 @@
 [![Build status][console-log-div-ci-image] ][console-log-div-ci-url]
 [![dependencies][console-log-div-dependencies-image] ][console-log-div-dependencies-url]
 [![devdependencies][console-log-div-devdependencies-image] ][console-log-div-devdependencies-url]
+[![semantic-release][semantic-image] ][semantic-url]
 
 ![console-log-div image][console-log-div image]
 
@@ -121,3 +122,5 @@ OTHER DEALINGS IN THE SOFTWARE.
 [console-log-div-devdependencies-image]: https://david-dm.org/bahmutov/console-log-div/dev-status.png
 [console-log-div-devdependencies-url]: https://david-dm.org/bahmutov/console-log-div#info=devDependencies
 [console-log-div image]: images/console-log-div.png
+[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release
