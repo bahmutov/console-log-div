@@ -7,6 +7,9 @@
   }
 
   function toString(x) {
+    if (x instanceof Error) {
+      return x.message;
+    }
     return typeof x === 'string' ? x : JSON.stringify(x);
   }
 
