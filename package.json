@@ -36,8 +36,8 @@
     "grunt-npm2bower-sync": "0.9.1",
     "jshint-summary": "0.4.0",
     "matchdep": "1.0.1",
-    "mocha": "2.4.5",
-    "pre-git": "3.8.3",
+    "mocha": "3.0.2",
+    "pre-git": "3.10.0",
     "semantic-release": "6.2.1"
   },
   "engines": {
